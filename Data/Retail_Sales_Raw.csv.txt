@@ -1,0 +1,21 @@
+Project Title:
+
+Retail Sales Analysis SQL Project
+
+Description:
+
+Built a beginner-friendly SQL project using PostgreSQL to analyze retail sales data. Explored sales trends, top-performing products, customer behavior, and regional performance. Created tables, loaded data, and wrote SQL queries to generate actionable insights.
+
+Skills Demonstrated:
+
+SQL, PostgreSQL, Data Analysis, Data Cleaning, ETL Concepts, Query Optimization
+
+Project Highlights:
+
+Analyzed total sales by product, category, and region
+
+Identified top customers and products
+
+Calculated monthly and yearly sales trends
+
+Built a structured SQL workflow suitable for portfolio showcase
