@@ -1,13 +1,13 @@
 # Retail Sales Data Pipeline (PostgreSQL) – ETL & Analytics
 
-## Project Overview
+# Project Overview
 This project demonstrates an end-to-end retail sales data pipeline built using PostgreSQL.
 
 It simulates how raw business data is transformed into structured, analysis-ready datasets for reporting and decision-making.
 
 ---
 
-## 🎯 Objectives
+# Objectives
 - Build a structured ETL pipeline using SQL
 - Transform raw sales data into fact and dimension tables
 - Ensure data quality through cleaning and validation
@@ -15,7 +15,7 @@ It simulates how raw business data is transformed into structured, analysis-read
 
 ---
 
-## 💼 Business Value
+# Business Value
 Retail companies rely on accurate data to understand sales performance and customer behavior.
 
 This pipeline helps:
@@ -26,13 +26,13 @@ This pipeline helps:
 
 ---
 
-## 🏗️ Pipeline Architecture
+# Pipeline Architecture
 
 Raw Data → Staging Tables → Transformed Tables → Analytics Layer
 
 ---
 
-## 📂 Data Model
+# Data Model
 
 ### Fact Table:
 - `sales_fact` → stores transactional sales data
@@ -45,7 +45,7 @@ Raw Data → Staging Tables → Transformed Tables → Analytics Layer
 
 ---
 
-## ⚙️ ETL Process
+# ETL Process
 
 ### 1. Extract
 - Load raw sales data into staging tables
@@ -60,7 +60,7 @@ Raw Data → Staging Tables → Transformed Tables → Analytics Layer
 
 ---
 
-## 💻 Example Queries
+# Example Queries
 
 ```sql
 -- Total sales by region
