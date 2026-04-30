@@ -1,0 +1,58 @@
+• Project File: create_tables.sql (PostgreSQL)
+
+- Purpose:
+
+This file defines the relational database schema for the Retail Sales Data Pipeline project. It establishes the foundational structure required to store and manage structured retail data for analytical and reporting purposes.
+
+- Overview:
+
+The schema is designed using a normalized relational model to support data integrity, scalability, and efficient querying. It represents the "Load" stage of the ETL process where cleaned and structured data is stored in PostgreSQL tables.
+
+- Database Design Components:
+
+1. Customers Table
+
+- Stores customer-level information such as personal details and contact information
+- Acts as a reference dimension table for linking sales transactions
+
+2. Products Table
+
+- Stores product metadata including name, category, and pricing
+- Used for product-level analysis and sales breakdowns
+
+3. Orders Table
+
+- Captures transaction-level order information
+- Links customers to their purchases
+- Stores total order value and order date for time-based analysis
+
+4. Order_Items Table
+
+- Represents line-item level transaction data
+- Enables granular analysis of product-level sales within each order
+- Connects orders and products through foreign key relationships
+
+5. Inventory Table
+
+- Tracks product stock levels and restock history
+- Supports inventory monitoring and stock availability analysis
+
+Key Design Principles:
+
+- Use of primary keys to ensure unique record identification
+- Foreign key relationships to enforce referential integrity
+- Separation of entities into normalized tables to reduce redundancy
+- Support for scalable analytical queries across multiple data dimensions
+
+ETL Context:
+
+This schema represents the final "Load" layer of the ETL pipeline, where transformed and cleaned data is stored in a structured relational format for downstream analysis and reporting.
+
+Learning Outcome:
+
+This file demonstrates understanding of:
+
+- Relational database design fundamentals
+- Primary and foreign key relationships
+- Normalization principles
+- Structuring data for analytical workloads in PostgreSQL
