@@ -1,0 +1,59 @@
+File: analysis_queries.sql (PostgreSQL)
+
+Project Context:
+This file contains analytical SQL queries used in the Retail Sales Data Pipeline project. It represents the "Analyze" stage of the data workflow, where structured and cleaned data is queried to generate insights.
+
+Purpose:
+The purpose of this file is to demonstrate practical SQL usage across a relational database by applying JOIN operations, aggregations, and filtering techniques to extract meaningful business insights.
+
+Query Scope:
+The analytical queries focus on combining multiple tables including:
+- customers
+- orders
+- products
+- order_items
+- inventory
+
+Key Analytical Areas:
+
+1. Sales Performance Analysis
+
+- Aggregating total revenue by product, category, and customer
+- Identifying high-performing products based on sales volume and revenue
+
+2. Customer Insights
+
+- Joining customer and order data to analyze purchasing activity
+- Summarizing customer-level order frequency and spending patterns
+
+3. Product Analysis
+
+- Evaluating product performance using quantity sold and total revenue
+- Comparing category-level sales distribution
+
+4. Inventory Insights
+
+- Checking stock levels against product demand
+- Identifying potential low-stock or high-demand items
+
+5. Data Quality Checks
+
+- Validating relationships across tables using JOIN operations
+- Ensuring consistency between orders, order_items, and products
+
+ETL Context:
+
+This file represents the final "Analyze" stage of the ETL pipeline:
+
+- Data is assumed to be cleaned and structured
+- Queries are used to generate insights and reporting outputs
+- Results support decision-making and business analysis
+
+Learning Outcome:
+
+This file demonstrates understanding of:
+
+- SQL JOIN operations across multiple tables
+- Aggregation and grouping techniques (SUM, COUNT, AVG)
+- Relational database querying for analytics
+- Translating structured data into business insights
