@@ -1,0 +1,54 @@
+File: clean_data.sql (PostgreSQL)
+
+- Project Context:
+
+This file contains SQL-based data cleaning and transformation logic used in the Retail Sales Data Pipeline project. It is part of the ETL "Transform" stage, where raw or structured data is prepared for analytical use.
+
+- Purpose:
+
+The purpose of this step is to ensure data consistency, accuracy, and usability by applying standard SQL cleaning operations before performing analysis or reporting.
+
+Data Cleaning Objectives:
+
+1. Handling Missing Values
+
+- Identify and manage NULL or missing values in key fields such as dates, quantities, and prices
+- Ensure that incomplete records do not affect analytical results
+
+2. Data Type Consistency
+
+- Ensure correct data types across all tables (e.g., DATE for order_date, NUMERIC for prices)
+- Standardize formats for reliable querying and aggregation
+
+3. Data Standardization
+
+- Normalize text values (e.g., category names, product names, city names)
+- Ensure consistent formatting for grouping and filtering operations
+
+4. Duplicate and Data Integrity Checks
+
+- Identify potential duplicate records in transactional data
+- Ensure relational integrity between orders, customers, and products
+
+5. Referential Integrity Validation
+
+- Ensure all foreign key relationships are valid before analysis
+- Validate that all order_items correctly reference existing orders and products
+
+ETL Role in Pipeline:
+
+This file represents the "Transform" stage of the ETL process:
+
+- Raw data is assumed to exist in structured tables
+- Cleaning operations prepare data for analytical queries
+- Output data becomes reliable for reporting and aggregation
+
+Learning Outcome:
+
+This file demonstrates understanding of:
+
+- SQL-based data cleaning techniques
+- Data quality validation concepts
+- ETL transformation workflows
+- Preparing structured data for analytics and reporting
+
