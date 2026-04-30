@@ -1,0 +1,62 @@
+File: analysis_queries.sql (PostgreSQL)
+
+Project Context:
+This file contains structured SQL analytical queries for the Retail Sales Data Pipeline project. It represents the "Analyze" stage of the ETL workflow, where cleaned and structured data is used to generate business insights.
+
+Purpose:
+The purpose of this file is to demonstrate practical SQL analysis using relational database concepts such as JOINs, aggregations, filtering, and grouping across multiple tables.
+
+Core Tables Used:
+- customers
+- orders
+- products
+- order_items
+- inventory
+
+Key Analytical Focus Areas:
+
+1. Sales Performance Analysis
+
+- Calculation of total sales revenue across orders
+- Aggregation of sales by product, category, and time period
+- Identification of high-performing products based on revenue and quantity sold
+
+2. Customer Analysis
+
+- JOIN operations between customers and orders
+- Customer purchase frequency and total spending analysis
+- Identification of top customers based on order value
+
+3. Product Performance Analysis
+
+- Product-level revenue and quantity sold analysis
+- Category-based performance comparison
+- Identification of best and worst performing products
+
+4. Inventory Analysis
+
+- Linking inventory levels with product demand
+- Identifying potential stock shortages
+- Comparing stock levels against sales performance
+
+5. Data Quality Validation
+
+- Ensuring referential integrity across all JOIN operations
+- Checking consistency between orders, order_items, and products tables
+
+ETL Context:
+
+This file represents the final "Analyze" stage of the ETL pipeline:
+
+- Data is already cleaned and structured
+- Queries are used to extract insights from relational data
+- Output supports reporting and decision-making use cases
+
+Learning Outcome:
+
+This file demonstrates:
+
+- Practical use of SQL JOINs across multiple tables
+- Aggregation techniques (SUM, COUNT, AVG)
+- Analytical thinking using relational data structures
+- Ability to transform structured data into business insights
