@@ -1,259 +1,126 @@
 # Retail Sales Analytics ETL Pipeline for Business Reporting (PostgreSQL)
 
----
+## Project Overview
 
-# Executive Summary
+This project demonstrates how raw retail sales data can be prepared for business reporting using PostgreSQL 18.
 
-This project demonstrates how PostgreSQL can be used to build a SQL-based ETL pipeline that transforms raw retail sales data into structured, reporting-ready datasets.
+The project follows a simplified ETL (Extract, Transform, Load) process to create a structured database, load realistic retail data, and produce business-focused SQL reports that support management decision-making.
 
-The project follows a simplified Extract, Transform and Load (ETL) workflow by cleaning raw data, applying business transformations, creating analytical tables and producing reporting-focused outputs that support sales analysis and business decision-making.
-
-Through this project, I strengthened my SQL, data preparation and reporting skills while building practical experience relevant to an entry-level Reporting Analyst role.
+The objective is not simply to write SQL queries, but to demonstrate the practical workflow used to prepare business data for reporting and analysis.
 
 ---
 
 # Business Scenario
 
-Retail organisations generate large volumes of transactional data every day.
+A national retail company collects thousands of sales transactions from multiple stores every day.
 
-Before this data can be used for reporting, it must be cleaned, validated and transformed into a consistent structure that supports reliable analysis.
+Before management can analyse performance, the data must first be organised into a structured database that supports accurate reporting.
 
-This project demonstrates how SQL can be used to prepare raw retail sales data for reporting by applying ETL principles and producing analytical datasets that support business performance monitoring.
+As a Junior Reporting Analyst, the responsibility is to prepare the data, maintain data quality, and create SQL reports that help managers understand business performance.
+
+The reports produced should answer questions such as:
+
+- Which stores generate the highest revenue?
+- Which products perform best?
+- Which employees achieve the highest sales?
+- Which provinces require management attention?
+- How much revenue is generated each month?
+- Which customers spend the most?
+- What is the return rate?
+- Are stores achieving their sales targets?
 
 ---
 
 # Project Objectives
 
-The objectives of this project were to:
-
-- Build a SQL-based ETL pipeline using PostgreSQL
-- Clean and validate retail sales data
-- Transform raw transactional data into structured analytical datasets
-- Produce reporting-ready outputs
-- Calculate sales performance metrics using SQL
-- Demonstrate business-focused analytical thinking
-
----
-
-# Dataset
-
-### Dataset Type
-
-Simulated Retail Sales Dataset
-
-### Database
-
-PostgreSQL
-
-### Business Domains
-
-- Customers
-- Products
-- Orders
-- Order Items
-- Inventory
+- Design a relational retail database using PostgreSQL 18.
+- Create realistic retail business data.
+- Demonstrate SQL data preparation techniques.
+- Produce clean business-ready datasets.
+- Build SQL reports for management.
+- Calculate key business performance indicators (KPIs).
+- Demonstrate Reporting Analyst thinking using SQL.
 
 ---
 
 # ETL Workflow
 
-The project follows a simplified SQL ETL process consisting of four stages:
-
 ### Extract
 
-- Load retail sales data into PostgreSQL
+Create the retail database and import business data into PostgreSQL.
 
 ### Transform
 
-- Validate records
-- Remove invalid data
-- Standardise business data
-- Join relational tables
-- Create calculated business metrics
-- Build analytical datasets
+Organise and structure the data into related tables.
+
+Apply SQL joins, filtering, grouping, calculations, and aggregations to prepare reporting datasets.
 
 ### Load
 
-- Store transformed data in reporting-ready tables
-- Generate reusable analytical summaries
-
-### Reporting
-
-- Analyse business performance
-- Produce SQL reporting outputs
-- Calculate key business metrics
+Generate business reports that can be used by management for decision-making.
 
 ---
 
 # Skills Demonstrated
 
-## SQL
-
-- PostgreSQL
-- SELECT
-- WHERE
+- PostgreSQL 18
+- SQL
+- Database Design
+- Relational Databases
+- Data Preparation
+- ETL Fundamentals
+- SQL Joins
+- Aggregate Functions
 - GROUP BY
 - ORDER BY
-- Aggregate Functions
-- INNER JOIN
-- CREATE TABLE
-- Data Transformation
-
-## ETL & Data Preparation
-
-- SQL ETL Workflow
-- Data Cleaning
-- Data Validation
-- Data Transformation
-- Analytical Dataset Creation
-- Reporting Data Preparation
-
-## Reporting & Analysis
-
 - Business Reporting
-- Sales Analysis
-- Trend Analysis
-- Customer Analysis
-- Product Performance Analysis
-- Revenue Analysis
-
-## Database Concepts
-
-- Relational Database Design
-- Primary Keys
-- Foreign Keys
-- Data Modelling
-
-## Professional Skills
-
-- Analytical Thinking
-- Business Problem Solving
-- Attention to Detail
-- Structured Data Preparation
-
----
-
-# Business Questions Explored
-
-The SQL queries explore questions such as:
-
-- How can raw retail sales data be prepared for reporting?
-- Which products generate the highest revenue?
-- Which customers contribute the most sales?
-- How does revenue change over time?
-- Which product categories perform best?
-- How can SQL support an ETL workflow for business reporting?
-
----
-
-# Reporting Outputs
-
-The project produces reporting-focused outputs including:
-
-- Total revenue summaries
-- Monthly revenue reports
-- Product performance reports
-- Category revenue analysis
-- Customer spending summaries
-- Analytical reporting tables
-- Clean reporting-ready datasets
+- KPI Reporting
+- Data Analysis
+- Executive Reporting
+- Documentation
 
 ---
 
 # Business Value
 
-Reliable reporting depends on reliable data.
+This project demonstrates how SQL can be used to transform raw business data into useful management information.
 
-This project demonstrates how SQL can be used to improve data quality before analysis by validating, cleaning and transforming retail sales data into structured reporting outputs.
+Rather than presenting raw transaction records, the project focuses on producing accurate business reports that support decision-making through clear KPIs, sales summaries, and performance analysis.
 
-The resulting datasets support business reporting, sales performance monitoring and operational decision-making.
-
----
-
-# SQL Concepts Covered
-
-This project demonstrates practical use of:
-
-- Relational Database Design
-- Data Cleaning
-- Data Validation
-- Data Transformation
-- SQL ETL Concepts
-- Aggregate Functions
-- INNER JOIN
-- GROUP BY
-- ORDER BY
-- Analytical SQL Queries
+The project reflects the type of reporting work commonly performed by Reporting Analysts in retail and other data-driven organisations.
 
 ---
 
 # Repository Structure
 
-```
 Retail-Sales-Analytics-ETL-Pipeline
 
 │
-├── Database Schema
-├── Raw Data
-├── Data Cleaning Scripts
-├── Data Transformation Scripts
-├── ETL Pipeline
-├── Analytical SQL Queries
-├── Reporting Queries
-└── README.md
-```
 
----
+├── README.md
 
-# What I Learned
+│
 
-Through this project I strengthened my ability to:
+├── SQL
 
-- Design SQL-based ETL workflows
-- Clean and validate business data
-- Build analytical datasets
-- Apply SQL transformations
-- Produce reporting-ready outputs
-- Analyse retail sales performance
-- Connect technical SQL work with business reporting requirements
+│   ├── 01_create_tables.sql
 
----
+│   ├── 02_insert_data.sql
 
-# Future Improvements
+│   └── 03_reporting_queries.sql
 
-As I continue developing this project I plan to:
+│
 
-- Expand the ETL workflow with additional business scenarios
-- Improve SQL query optimisation
-- Introduce SQL views for reusable reporting
-- Create additional reporting datasets
-- Expand KPI reporting
-- Explore automation of SQL reporting workflows
-
----
-
-# About This Project
-
-This project forms part of my SQL portfolio while preparing for entry-level Reporting Analyst opportunities in South Africa.
-
-It demonstrates my ability to prepare business data for reporting using SQL by combining ETL concepts, relational database design and analytical querying within PostgreSQL.
-
----
-
-# Why This Project Matters
-
-Business reporting is only as reliable as the quality of the underlying data.
-
-This project demonstrates how SQL can be used to prepare, transform and structure raw retail sales data before analysis, ensuring that reporting outputs are more accurate, consistent and useful for business decision-making.
-
-Throughout the project I approached the workflow from the perspective of producing reliable reporting data rather than simply writing SQL queries.
+└── Images
 
 ---
 
 # About Me
 
-**Piwe Kasumba**
+I am an aspiring Reporting Analyst from South Africa with a strong interest in business reporting, SQL, and data analysis.
 
-Aspiring Reporting Analyst (SQL)
+I am building practical PostgreSQL projects to strengthen my SQL skills and demonstrate my ability to organise business data, calculate KPIs, and produce reports that support decision-making.
 
-Building practical SQL projects focused on data preparation, business reporting, KPI analysis and decision support while preparing for an entry-level Reporting Analyst opportunity in South Africa.
+My goal is to begin my career as an Entry-Level Reporting Analyst where I can continue learning while contributing accurate, reliable, and business-focused reporting.
+
+Thank you for taking the time to review my project.
