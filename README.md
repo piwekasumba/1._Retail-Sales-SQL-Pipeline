@@ -24,17 +24,17 @@ The project focuses on:
 * Producing reporting outputs
 * Calculating business measures
 ---
-## Tools / Technologies
+## Tools / Technologies 
 
-* PostgreSQL 18
-* SQL
-* Relational databases
-* SQL joins
-* Aggregate functions
-* GROUP BY
-* ORDER BY
-* Data preparation
-* KPI reporting
+- PostgreSQL 18
+- SQL
+- Relational databases
+- SQL joins
+- Aggregate functions
+- GROUP BY
+- ORDER BY
+- Data preparation
+- Reporting measures
 ---
 ## Dataset
 
@@ -50,14 +50,14 @@ The pipeline is designed around practical retail reporting questions that requir
 
 Examples include:
 
-| Business Question                                        | Data / ETL Process                                                         | Reporting Purpose                                     |
-|----------------------------------------------------------|----------------------------------------------------------------------------|-------------------------------------------------------|
-| What is the overall sales performance?                   | Prepare and aggregate sales data                                           | Provide a consistent view of sales activity           |
-| Which products generate the strongest sales?             | Clean, transform and aggregate product sales data                          | Compare product performance                           |
-| How does sales performance differ across stores?         | Combine and transform store and sales information                          | Compare store performance                             |
-| Which sales periods show stronger or weaker activity?    | Transform transaction dates and summarise sales                            | Monitor changes in sales performance over time        |
-| How can raw retail data be prepared for reporting?       | Extract, transform and load data into a structured format                  | Create a reliable foundation for downstream reporting |
-| How can multiple data elements be combined for analysis? | Transform and connect related data | Produce more useful reporting outputs |
+| Business Question                                        | Data / ETL Process                                        | Reporting Purpose                                     |
+|----------------------------------------------------------|-----------------------------------------------------------|-------------------------------------------------------|
+| What is the overall sales performance?                   | Prepare and aggregate sales data                          | Provide a consistent view of sales activity           |
+| Which products generate the strongest sales?             | Clean, transform and aggregate product sales data         | Compare product performance                           |
+| How does sales performance differ across stores?         | Combine and transform store and sales information         | Compare store performance                             |
+| Which sales periods show stronger or weaker activity?    | Transform transaction dates and summarise sales           | Monitor changes in sales performance over time        |
+| How can raw retail data be prepared for reporting?       | Extract, transform and load data into a structured format | Create a reliable foundation for downstream reporting |
+| How can multiple data elements be combined for analysis? | Transform and connect related data                        | Produce more useful reporting outputs                 |
 
 The purpose of the pipeline is to show how data preparation and transformation support the reporting process rather than treating raw transactional data as the final reporting source.
 ---
@@ -68,8 +68,7 @@ The project follows a simplified workflow:
 **Source Data → Data Preparation → PostgreSQL Tables → SQL Transformation → Reporting Analysis**
 
 ### Business Reporting Connection
-
-The pipeline follows a practical reporting workflow:
+The project workflow can be understood in reporting terms as:
 
 **Source Data → Extract → Transform → Load → Reporting Dataset → Business Analysis**
 
@@ -81,7 +80,7 @@ Each stage has a reporting purpose.
 - **Reporting Dataset:** Provide a more usable data foundation for analysis.
 - **Business Analysis:** Use the prepared data to answer questions about sales, products, stores and performance.
 
-This demonstrates that reporting quality depends not only on the final SQL query, but also on how the underlying data is prepared.
+This demonstrates why reporting quality depends not only on the final SQL query, but also on how the underlying data is prepared.
 ---
 ### Extract
 
@@ -129,7 +128,7 @@ The resulting data can support analysis such as:
 - Identifying differences in sales performance
 - Preparing consistent data for downstream reporting
 
-The key outcome of this project is the demonstration of a repeatable data preparation workflow.
+The key outcome of this project is demonstrating a structured data preparation workflow that can support downstream SQL analysis and reporting.
 
 Specific numerical findings should be taken from the actual processed data and analysis rather than estimated or assumed in the README.
 ---
