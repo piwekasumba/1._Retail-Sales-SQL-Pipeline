@@ -1,110 +1,214 @@
 # Retail Sales Analytics ETL Data Pipeline
 
-A PostgreSQL project exploring how retail data can be prepared, structured and analysed for business reporting.
+A PostgreSQL project demonstrating a simplified SQL-based data preparation and ETL workflow for transforming retail sales data into a structured foundation for business reporting.
+
+The project focuses on the stage that happens before reporting:
+
+**Source Data → Extract → Transform → Load → Reporting Dataset → Analysis**
+
 ---
-## Business Problem
 
-Retail businesses collect transaction data that needs to be organised before it can be used effectively for reporting.
+## Why This Project Exists
 
-Poorly structured data can make it harder to calculate KPIs, compare performance and answer basic business questions.
+Business reporting depends on more than the final SQL query.
 
-This project focuses on the SQL workflow of preparing retail data and producing reporting outputs from the structured dataset.
+If source data is inconsistent, poorly structured or incorrectly joined, downstream reporting can produce misleading results even when the reporting query itself is technically valid.
+
+This project therefore focuses on the data preparation stage.
+
+It demonstrates how retail data can be prepared, structured and transformed in PostgreSQL before being used for business analysis.
+
 ---
+
 ## Project Objective
 
-The objective is to practise a simplified SQL-based data preparation workflow that moves from source data through database preparation and transformation into reporting analysis.
+The objective is to practise a simplified SQL-based ETL workflow that prepares retail data for reporting.
 
 The project focuses on:
 
-* Preparing retail data
-* Structuring related business tables
-* Loading data into PostgreSQL
-* Transforming data with SQL
-* Joining related tables
-* Producing reporting outputs
-* Calculating business measures
----
-## Tools / Technologies 
+* Source-data preparation
+* Data extraction
+* Data transformation
+* PostgreSQL loading
+* Relational table structures
+* SQL joins
+* Filtering
+* Aggregation
+* Business measures
+* Reporting datasets
+* Data-quality considerations
 
-- PostgreSQL 18
-- SQL
-- Relational databases
-- SQL joins
-- Aggregate functions
-- GROUP BY
-- ORDER BY
-- Data preparation
-- Reporting measures
 ---
+
+## Industry Context
+
+This project represents the **retail/FMCG data preparation** side of my portfolio.
+
+Retail reporting often depends on combining information such as:
+
+* Transactions
+* Products
+* Stores
+* Customers
+* Employees
+* Dates
+* Sales measures
+
+Before these records can support reliable reporting, they need to be structured consistently.
+
+---
+
+## Tools & Technologies
+
+* PostgreSQL 18
+* SQL
+* Relational databases
+* SQL joins
+* Aggregate functions
+* Filtering
+* Data transformation
+* Data preparation
+* Reporting measures
+
+---
+
 ## Dataset
 
 The project uses retail sales data for portfolio and learning purposes.
 
-The data represents a retail business scenario involving sales and related business information.
+The data represents a simulated retail business scenario involving sales and related business information.
 
-It is simulated/project data and does not represent a real company's operational data.
+It does not represent a real company's operational data.
+
 ---
+
+## ETL Workflow
+
+The simplified workflow is:
+
+```text
+Source Data
+     ↓
+Extract
+     ↓
+Transform
+     ↓
+Load
+     ↓
+Structured PostgreSQL Data
+     ↓
+Reporting Dataset
+     ↓
+Business Analysis
+```
+
+Each stage has a specific purpose.
+
+---
+
+## Extract
+
+The project begins with the available retail source data.
+
+The extraction stage identifies the information required for the downstream analysis.
+
+The objective is to ensure that the relevant source records are available before transformation and reporting.
+
+---
+
+## Transform
+
+SQL is used to prepare and structure the data.
+
+Transformation activities include:
+
+* Selecting required fields
+* Filtering records
+* Joining related information
+* Grouping records
+* Calculating measures
+* Aggregating transactional data
+* Preparing information for reporting
+
+The transformation stage is important because reporting outputs depend on the structure and quality of the data entering the reporting layer.
+
+---
+
+## Load
+
+The prepared information is loaded or organised within PostgreSQL so that it can be queried consistently.
+
+The resulting structure provides a foundation for downstream SQL analysis.
+
+This is a learning-level SQL pipeline and is not presented as a production ETL platform.
+
+---
+
+## Reporting Dataset
+
+The pipeline prepares data that can support questions such as:
+
+* What is overall sales performance?
+* Which products perform strongly?
+* How does sales performance differ between stores?
+* Which periods show stronger or weaker activity?
+* How can transactional information be summarised consistently?
+
+The pipeline therefore connects technical data preparation with the eventual reporting requirement.
+
+---
+
 ## Business Questions
 
-The pipeline is designed around practical retail reporting questions that require data to be prepared, transformed and structured before analysis.
+| Business Question                                    | ETL / SQL Process                         | Reporting Purpose                   |
+| ---------------------------------------------------- | ----------------------------------------- | ----------------------------------- |
+| What is overall sales performance?                   | Prepare and aggregate sales data          | Establish a consistent sales view   |
+| Which products generate the strongest sales?         | Transform and aggregate product sales     | Compare product performance         |
+| How does sales performance differ across stores?     | Combine store and sales information       | Compare locations                   |
+| Which periods show stronger or weaker activity?      | Transform transaction dates and aggregate | Monitor changes over time           |
+| How can raw retail data be prepared for reporting?   | Extract, transform and load               | Create a reporting-ready foundation |
+| How can multiple business data elements be combined? | Join and transform related data           | Support broader reporting analysis  |
 
-Examples include:
-
-| Business Question                                        | Data / ETL Process                                        | Reporting Purpose                                     |
-|----------------------------------------------------------|-----------------------------------------------------------|-------------------------------------------------------|
-| What is the overall sales performance?                   | Prepare and aggregate sales data                          | Provide a consistent view of sales activity           |
-| Which products generate the strongest sales?             | Clean, transform and aggregate product sales data         | Compare product performance                           |
-| How does sales performance differ across stores?         | Combine and transform store and sales information         | Compare store performance                             |
-| Which sales periods show stronger or weaker activity?    | Transform transaction dates and summarise sales           | Monitor changes in sales performance over time        |
-| How can raw retail data be prepared for reporting?       | Extract, transform and load data into a structured format | Create a reliable foundation for downstream reporting |
-| How can multiple data elements be combined for analysis? | Transform and connect related data                        | Produce more useful reporting outputs                 |
-
-The purpose of the pipeline is to show how data preparation and transformation support the reporting process rather than treating raw transactional data as the final reporting source.
 ---
-## Data Preparation / ETL Workflow
 
-The project follows a simplified workflow:
+## Why Data Preparation Matters for Reporting
 
-**Source Data → Data Preparation → PostgreSQL Tables → SQL Transformation → Reporting Analysis**
+A reporting analyst may receive data from multiple sources or tables.
 
-### Business Reporting Connection
-The project workflow can be understood in reporting terms as:
+Before calculating a KPI, the analyst needs to consider:
 
-**Source Data → Extract → Transform → Load → Reporting Dataset → Business Analysis**
+* Are the records complete?
+* Are the relationships correct?
+* Are duplicate records present?
+* Are dates stored consistently?
+* Are values standardised?
+* Are joins creating duplicated rows?
+* Are calculated measures based on the correct records?
 
-Each stage has a reporting purpose.
+The pipeline demonstrates the principle that **reporting quality depends partly on the quality of the data preparation process**.
 
-- **Extract:** Obtain the source data required for analysis.
-- **Transform:** Clean, standardise and prepare the data for consistent reporting.
-- **Load:** Store the prepared data in a structured form that can be queried.
-- **Reporting Dataset:** Provide a more usable data foundation for analysis.
-- **Business Analysis:** Use the prepared data to answer questions about sales, products, stores and performance.
-
-This demonstrates why reporting quality depends not only on the final SQL query, but also on how the underlying data is prepared.
 ---
-### Extract
 
-The project begins with the available retail data and prepares it for use in PostgreSQL.
+## Data Quality Checks
+
+The project considers:
+
+* Table relationships
+* Join accuracy
+* Consistent values
+* Duplicate or unexpected records
+* Missing data
+* Aggregation accuracy
+* Date handling
+* Calculated measure validation
+
+For a production environment, additional controls would be required depending on the source systems and reporting requirements.
+
 ---
-### Transform
 
-SQL is used to structure and analyse the data through operations such as:
+## Reporting Analysis Supported
 
-* Joining related tables
-* Filtering records
-* Grouping data
-* Calculating measures
-* Aggregating results
----
-### Load / Reporting Output
-
-The prepared data is made available through the PostgreSQL database for further SQL analysis and reporting.
-
-The project should be understood as a learning-level SQL data pipeline rather than a production ETL platform.
----
-## SQL Analysis
-
-The analysis uses the prepared retail data to produce reporting outputs around:
+The prepared retail data can support downstream analysis involving:
 
 * Sales performance
 * Store performance
@@ -114,75 +218,78 @@ The analysis uses the prepared retail data to produce reporting outputs around:
 * Provincial performance
 * Returns
 * Sales targets
+* Time-based sales analysis
+
+The purpose of this repository is primarily to demonstrate the preparation stage rather than duplicate the full management-reporting focus of the RetailMart project.
+
 ---
-## Key Findings
 
-The pipeline prepares retail sales data so that it can be used for structured analysis and reporting.
+## Portfolio Relationship
 
-The resulting data can support analysis such as:
+This project complements the RetailMart project.
 
-- Comparing sales performance across stores
-- Reviewing product sales
-- Monitoring sales activity over time
-- Summarising transactional records
-- Identifying differences in sales performance
-- Preparing consistent data for downstream reporting
+### Retail Sales Analytics ETL Data Pipeline
 
-The key outcome of this project is demonstrating a structured data preparation workflow that can support downstream SQL analysis and reporting.
+Focus:
 
-Specific numerical findings should be taken from the actual processed data and analysis rather than estimated or assumed in the README.
+**Data Preparation → Transformation → Reporting Dataset**
+
+### RetailMart Executive Reporting SQL Project
+
+Focus:
+
+**Business Question → KPI → SQL Analysis → Reporting Interpretation**
+
+Together they demonstrate two connected parts of a reporting workflow:
+
+```text
+Source Data
+    ↓
+Data Preparation
+    ↓
+Structured Reporting Data
+    ↓
+SQL Analysis
+    ↓
+KPI / Reporting Output
+    ↓
+Business Interpretation
+```
+
 ---
-## Business / Reporting Insights
 
-The project demonstrates how an ETL workflow can support reliable business reporting by preparing raw retail data before analysis.
+## Key Skills Demonstrated
 
-The reporting value can be seen in the progression:
+* PostgreSQL
+* SQL
+* Data preparation
+* ETL concepts
+* Relational data
+* SQL joins
+* Aggregation
+* Filtering
+* Transformation
+* Data-quality awareness
+* Reporting-data preparation
 
-**Raw Data → Prepared Data → Reporting Dataset → Business Question → Analysis**
-
-For example:
-
-**Business question:** Which products generate the strongest sales?
-
-**Data / ETL process:** Extract the relevant sales records, transform the data into a consistent structure and load the prepared data for analysis.
-
-**Result:** The prepared dataset can be aggregated to compare product sales performance.
-
-**Reporting interpretation:** The resulting comparison can help reporting users understand differences in product performance and identify areas that may require further investigation.
-
-The same approach can be applied to store performance and sales trends.
-
-This project demonstrates that data preparation is an important part of the reporting process because inaccurate, inconsistent or poorly structured source data can affect the reliability of downstream analysis.
 ---
-## Why This Matters for Reporting
 
-Reporting analysts often work with data that must be prepared before meaningful analysis can take place.
+## Portfolio Role Alignment
 
-This project demonstrates the connection between data preparation and reporting by showing how:
+This project provides evidence of foundational data-preparation skills relevant to entry-level:
 
-- Raw data can be transformed into a more usable structure
-- Data can be prepared consistently for analysis
-- Related information can be combined
-- Transaction-level data can be summarised
-- Prepared data can support business reporting questions
+* Reporting Analyst
+* Junior Reporting Analyst
+* Junior Data Analyst
+* Data Analyst
+* SQL-focused analyst roles
 
-The project therefore complements the SQL reporting projects in this portfolio by focusing on the data preparation stage that supports reliable reporting outputs.
+It is particularly useful as supporting evidence because it shows that the portfolio considers the data preparation stage before reporting.
+
+The project does not claim production ETL engineering experience.
+
 ---
-## Data Quality Considerations
 
-Data preparation is an important part of reporting.
-
-This project considers:
-
-* Consistent table structures
-* Relationships between related data
-* Correct joins
-* Accurate aggregation
-* Consistent values used in analysis
-* Validation of calculated reporting measures
-
-For a real business environment, additional checks would be required for duplicates, missing values, invalid records and source-system inconsistencies.
----
 ## Project Structure
 
 ```text
@@ -198,31 +305,71 @@ Retail-Sales-Analytics-ETL-Data-Pipeline-Project
     ├── 4.SQL-Commit-4
     └── 5.SQL-Commit-5
 ```
+
 ---
+
 ## How to Run
 
 1. Install PostgreSQL.
 2. Create a database for the project.
-3. Review the files under `Retail_sales_data_pipeline`.
-4. Start with the data and SQL stages in the project structure.
-5. Run the SQL scripts in their intended sequence.
-6. Review the resulting tables and reporting queries.
-7. Compare the outputs with the business questions.
----
-## What This Project Demonstrates
+3. Review the files under:
 
-This project demonstrates my ability to:
+```text
+Retail_sales_data_pipeline
+```
 
-* Work with PostgreSQL
-* Prepare structured business data
-* Use SQL to transform and analyse data
-* Work with related tables
-* Produce reporting outputs
-* Think about data quality before reporting
-* Connect data preparation to business reporting
+4. Start with the available data files.
+5. Follow the SQL stages in their intended sequence.
+6. Run the SQL transformations.
+7. Review the resulting tables and reporting outputs.
+8. Compare the outputs with the business questions.
+
 ---
+
+## How to Review This Project
+
+A reviewer can start with:
+
+1. `README.md` — understand the ETL/reporting purpose
+2. `1.Data` — inspect the source data
+3. SQL stages — follow the transformation process
+4. Resulting PostgreSQL structures — understand the reporting foundation
+
+The key evidence is the progression from source data to structured information.
+
+---
+
+## Limitations
+
+This project is a learning-level SQL ETL demonstration.
+
+It does not represent:
+
+* A production data pipeline
+* Enterprise orchestration
+* Cloud data engineering
+* Production monitoring
+* Automated scheduling
+* Production data governance
+* Professional data-engineering employment experience
+
+The purpose is to demonstrate practical PostgreSQL-based data preparation.
+
+---
+
+## What I Am Building Through This Project
+
+I am strengthening my understanding of how data preparation affects downstream reporting.
+
+The central principle is:
+
+**Better-structured data → More reliable analysis → More useful reporting**
+
+---
+
 ## About
 
-This project forms part of my SQL portfolio as I build practical evidence for an entry-level Reporting Analyst role.
+I am building practical PostgreSQL and SQL projects focused on business reporting, data preparation, data quality and analytical thinking.
 
-My focus is on strengthening PostgreSQL, data preparation and business reporting skills through practical projects.
+This project forms part of that portfolio by focusing specifically on the data preparation stage that supports reliable reporting.
+
